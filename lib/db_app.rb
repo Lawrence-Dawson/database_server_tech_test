@@ -9,13 +9,12 @@ class DbApp < Sinatra::Base
   end
 
   get '/get' do
-    query = request.query_string
+    p split = request.query_string.split('=')
   end
 
   get '/set' do
-    query = request.query_string
-    split = query.split('=')
-   $db[split[0]] = split[1]
+    split = request.query_string.split('=')
+    $db[split[0]] = split[1]
   end
 
   # start the server if ruby file executed directly

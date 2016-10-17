@@ -21,8 +21,8 @@ describe "GET data" do
     end
 
     it "returns all the todos" do
-      visit "/get?key=somekey"
-      expect(page).to have_content "somekey"
+      visit "/get?key=:name"
+      expect(page).to have_content "Lawrence"
     end
   end
 
