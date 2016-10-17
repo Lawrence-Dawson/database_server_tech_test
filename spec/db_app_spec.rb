@@ -24,7 +24,7 @@ describe "GET data" do
       visit "/"
       expect(page).to have_content "There is data in the database"
     end
-  
+
 
     it "returns value" do
       visit "/get?key=name"
