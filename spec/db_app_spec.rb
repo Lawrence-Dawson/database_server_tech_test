@@ -21,8 +21,8 @@ describe "GET data" do
     end
 
     it "returns all the todos" do
-      visit "/get?key=:name"
-      expect(page).to have_content "Lawrence"
+      visit "/get?key=somekey"
+      expect(page).to have_content "somekey"
     end
   end
 
@@ -32,8 +32,8 @@ describe "GET data" do
     end
     context "add data" do
       it "adds data to db" do
-        visit "/set?name=Joe"
-        expect($db.count).to eq("1")
+        visit "/set?somekey=somevalue"
+        expect($db.count).to eq(1)
       end
     end
   end
