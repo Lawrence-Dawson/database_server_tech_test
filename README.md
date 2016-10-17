@@ -22,5 +22,3 @@ To run the app
   - Run bundle install in the command line
   - Run 'ruby app.rb' in the command line
   - Open your browser of choice and navigate to 'http://localhost:4000/'
-
-  
