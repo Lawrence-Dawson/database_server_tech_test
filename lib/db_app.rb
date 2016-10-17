@@ -19,6 +19,5 @@ class DbApp < Sinatra::Base
     $db[split[0]] = split[1]
   end
 
-  # start the server if ruby file executed directly
   run! if app_file == $0
 end

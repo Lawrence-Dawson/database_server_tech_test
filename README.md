@@ -16,9 +16,24 @@ To achieve everything I was tasked with I chose to use the following technologie
 
 # How to
 
-To run the app
+Run the app
 
   - Clone and change into this repository
   - Run bundle install in the command line
   - Run 'ruby app.rb' in the command line
   - Open your browser of choice and navigate to 'http://localhost:4000/'
+
+Use the app
+
+ To add to the Database
+
+  - Visit "http://localhost:4000/set?" and append a key and value eg "name=Lawrence"
+    your key and value will now be saved in the Database.
+
+To retrieve data from Database
+
+  - Visit "http://localhost:4000/get?" and append 'key=' and then your key eg "key=name"
+    your value will now be retrieved from the database.
+
+    Enjoy,
+    Lawrence Dawson
