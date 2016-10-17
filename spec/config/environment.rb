@@ -7,4 +7,4 @@ Bundler.require(Sinatra::Base.environment)  # load all the environment specific 
 require "active_support/deprecation"
 require "active_support/all"
 
-$db = []                     
+$db = {}                     
