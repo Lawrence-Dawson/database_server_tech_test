@@ -13,6 +13,8 @@ To achieve everything I was tasked with I chose to use the following technologie
   - Ruby
   - Sinatra framework
   - Rspec
+  - Capybara
+  - Launchy
 
 # How to
 
