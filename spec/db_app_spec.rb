@@ -17,11 +17,11 @@ describe "GET data" do
 
   context "add data" do
     before do
-      $db = {:name => 'Lawrence', :age => '29'}
+      $db = {"name" => 'Lawrence', :age => '29'}
     end
 
     it "returns all the todos" do
-      visit "/get?key=:name"
+      visit "/get?key=name"
       expect(page).to have_content "Lawrence"
     end
   end
