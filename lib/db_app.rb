@@ -11,7 +11,7 @@ class DbApp < Sinatra::Base
   get '/get' do
     split = request.query_string.split('=')
     key = split[1]
-    p $db[key]
+    $db[key]
   end
 
   get '/set' do
