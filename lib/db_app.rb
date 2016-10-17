@@ -2,14 +2,18 @@ require 'sinatra/base'
 
 class DbApp < Sinatra::Base
   set :port, 4000
-  $db = {:name => 'Lawrence'}
+  $db = {}
 
   get '/' do
-    $db == {} ? 'No data' :   'There is data'
+    $db == {} ? 'No data' : 'There is data'
   end
 
-  get '/get/key=somekey' do
-    $db[params[:somekey]]
+  get '/get' do
+    p params[:key]
+  end
+
+  get '/set' do
+    p params[:key]
   end
 
   # start the server if ruby file executed directly

@@ -11,7 +11,6 @@ describe "GET data" do
   context "no data" do
     it "returns no data" do
       visit "/"
-      save_and_open_page
       expect(page).to have_content("No data")
     end
   end
@@ -26,4 +25,18 @@ describe "GET data" do
       expect(page).to have_content "Lawrence"
     end
   end
+
+  describe "SET data" do
+    before do
+      $db = {}
+    end
+    context "add data" do
+      it "adds data to db" do
+        visit "/set?name=Joe"
+        expect($db.count).to eq("1")
+      end
+    end
+  end
+
+
 end
