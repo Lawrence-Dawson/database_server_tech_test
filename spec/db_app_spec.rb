@@ -1,6 +1,6 @@
 describe "Configuration" do
   context "Port" do
-    it "the cuurent port is localhost 4000" do
+    it "the current port is localhost 4000" do
       visit "http://localhost:4000/"
       expect(page).to have_content("No data")
     end
@@ -20,7 +20,13 @@ describe "GET data" do
       $db = {"name" => 'Lawrence', :age => '29'}
     end
 
-    it "returns all the todos" do
+    it "updates the database status" do
+      visit "/"
+      expect(page).to have_content "There is data in the database"
+    end
+  
+
+    it "returns value" do
       visit "/get?key=name"
       expect(page).to have_content "Lawrence"
     end

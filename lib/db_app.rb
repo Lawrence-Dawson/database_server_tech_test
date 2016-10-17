@@ -5,7 +5,7 @@ class DbApp < Sinatra::Base
   $db = {}
 
   get '/' do
-    $db == {} ? 'No data' : 'There is data'
+    $db == {} ? 'No data in the database' : 'There is data in the database'
   end
 
   get '/get' do
